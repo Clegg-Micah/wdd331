@@ -1,10 +1,10 @@
-/*Screen CSS for W01 WDD331*/
 /*Imports*/
 @import url('https://fonts.googleapis.com/css?family=Lora');
 
 /*General Styles: Everything which does not change*/
 body {
   font-family: Helvetica, Arial, sans-serif;
+  background-color: #FAEBD7;
 }
 h1, h2 {
   font-family: 'Lora', serif;
@@ -26,10 +26,6 @@ a:active {
 nav a:hover {
   color: #FFFFFF;
 }
-img {
-  width:auto;
-  height: auto;
-}
 h2 a {
   color: #000000;
 }
@@ -45,11 +41,9 @@ main {
 }
 article {
  background-color: #FFFFFF;
- box-shadow: 3px 4px #888888;
- margin: auto;
+ box-shadow: 3px 4px 10px #888888;
+ margin: 10px auto;
  padding: 2em;
- width: 95vw;
-
 }
 header {
   background-color: #6495ED;
@@ -65,8 +59,36 @@ header ul li {
 hr {
   color:#FAEBD7
 }
+.post-date {
+  color: gray;
+}
 
 
 /*Mobile Styles: Everything which changes with media queries*/
   /* put the header at the top of the page */
+
+article {
+ width: 90%;
+ max-width: 90%;
+}
+img {
+  width: 70%;
+  height: auto;
+  margin: 2em 15%;
+  /*
+  padding: 3em 20vw 1em; */
+}
 /*Large Screen Styles: Media Queries for larger screens*/
+@media screen and (min-width: 768px) {
+  header {
+    position: fixed;
+    height: 100%;
+    width: 20vw;
+  }
+  main {
+    position: absolute;
+    right: 5vw;
+    width: 60vw;
+    padding: auto;
+  }
+}
