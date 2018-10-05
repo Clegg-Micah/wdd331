@@ -1,0 +1,81 @@
+/*Imports*/
+@import url("https://fonts.googleapis.com/css?family=Lora");
+/*Variables*/
+/*General Styles: Everything which does not change*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #FAEBD7; }
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif; }
+
+a {
+  color: #6495ED;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  a:active {
+    color: #DEB887; }
+
+nav a:hover {
+  color: #FFFFFF; }
+
+h2 a {
+  color: #000000; }
+  h2 a:hover {
+    color: #6495ED; }
+
+main {
+  padding: 30px 15px;
+  margin: 0 auto;
+  background-color: #FAEBD7;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap nowrap;
+  -ms-flex-flow: column nowrap nowrap;
+  flex-flow: column nowrap nowrap; }
+  @media (min-width: 768px) {
+    main {
+      position: absolute;
+      right: 5vw;
+      width: 60vw; } }
+
+article {
+  background-color: #FFFFFF;
+  box-shadow: 3px 4px 10px #888888;
+  margin: 10px auto;
+  padding: 2em;
+  width: 90%;
+  max-width: 90%; }
+
+header {
+  background-color: #6495ED;
+  padding: 2em;
+  text-align: right; }
+  header ul {
+    list-style: none; }
+    header ul li {
+      margin: 1em 0; }
+  header a, header a:visited {
+    color: #FAEBD7;
+    text-decoration: none; }
+  @media (min-width: 768px) {
+    header {
+      position: fixed;
+      height: 100%;
+      width: 20vw; } }
+
+hr {
+  color: #FAEBD7; }
+
+.post-date {
+  color: gray; }
+
+img {
+  width: 70%;
+  height: auto;
+  margin: 2em 15%; }
+
+/*# sourceMappingURL=main.css.map */

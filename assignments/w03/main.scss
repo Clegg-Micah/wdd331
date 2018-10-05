@@ -1,0 +1,110 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+/*Variables*/
+$main-blue: #6495ED;
+$background-color: #FAEBD7;
+$beige: #DEB887;
+$white: #FFFFFF;
+$shadow: #888888;
+$black: #000000;
+
+$break-small: 768px;
+$break-large: 1100px;
+
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (min-width: $break-large) {@content;}
+  }
+  @else if $break == small {
+    @media (min-width: $break-small) {@content;}
+  }
+}
+
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis $wrap;
+    -ms-flex-flow: $axis $wrap;
+    flex-flow: $axis $wrap;
+}
+/*General Styles: Everything which does not change*/
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: $background-color;
+}
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+}
+a {
+  color: $main-blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: $beige;
+  }
+}
+nav a:hover {
+  color: $white;
+}
+h2 a {
+  color: $black;
+  &:hover {
+    color: $main-blue;
+  }
+}
+main {
+  padding: 30px 15px;
+  margin: 0 auto;
+  background-color: $background-color;
+  @include flex-container(column nowrap);
+  @include breakpoint(small) {
+    position: absolute;
+    right: 5vw;
+    width: 60vw;
+  }
+}
+article {
+ background-color: $white;
+ box-shadow: 3px 4px 10px $shadow;
+ margin: 10px auto;
+ padding: 2em;
+ width: 90%;
+ max-width: 90%;
+}
+header {
+  background-color: $main-blue;
+  padding: 2em;
+  text-align: right;
+  ul {
+    list-style: none;
+    li {
+      margin: 1em 0;
+    }
+  }
+  a, a:visited {
+    color: $background-color;
+    text-decoration: none;
+  }
+  @include breakpoint(small) {
+    position: fixed;
+    height: 100%;
+    width: 20vw;
+  }
+}
+hr {
+  color:$background-color
+}
+.post-date {
+  color: gray;
+}
+
+img {
+  width: 70%;
+  height: auto;
+  margin: 2em 15%;
+}
