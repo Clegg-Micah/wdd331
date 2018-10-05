@@ -61,7 +61,7 @@ main {
   padding: 30px 15px;
   margin: 0 auto;
   background-color: $background-color;
-  @include flex-container(column nowrap);
+  @include flex-container(column);
   @include breakpoint(small) {
     position: absolute;
     right: 5vw;
