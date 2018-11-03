@@ -1,0 +1,80 @@
+/* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
+/*variables
+
+*/
+/*breakpoints
+
+*/
+/* Mixins
+
+*/
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: darkblue;
+    color: white;
+
+    margin: auto;
+}
+.page-wrapper > div {
+    max-width: 90vw;
+    margin: auto;
+}
+
+header {
+    padding: 1em 0 2em 0;
+    width: auto;
+    text-align: center;
+    color: blue;
+    background-color: yellow;
+    border-radius: 0 0 150% 150%;
+}
+
+header>* {
+
+}
+h1 {
+    margin: 0;
+}
+.intro{
+    /*add CSS Rocket as background*/
+}
+.preamble{
+    background-color: darkgray;
+    color: blue;
+}
+
+.summary{
+
+}
+.main{
+    position: relative;
+}
+
+.main::before{
+    //planet css image
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    border:2em solid black;
+    color: black;
+    background: black;
+    content: '';
+}
+
+.supporting{}
+
+.participation{}
+
+.requirements{}
+
+.footer{}
+
+.sidebar{}
+
+.design-archives{}
+
+.zen-resources{};
