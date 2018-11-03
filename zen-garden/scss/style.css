@@ -1,6 +1,5 @@
 /* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
 /*variables
-
 */
 /*breakpoints
 
@@ -11,12 +10,11 @@
 body {
   display: flex;
   flex-flow: column nowrap;
-  background-color: darkblue;
-  color: white;
+  background-color: white;
+  color: black;
   margin: auto; }
 
 .page-wrapper > div {
-  max-width: 90vw;
   margin: auto; }
 
 header {
@@ -34,13 +32,22 @@ h1 {
   /*add CSS Rocket as background*/ }
 
 .preamble {
-  background-color: darkgray;
-  color: blue; }
+  background-color: gray;
+  color: blue;
+  width: 75%;
+  margin: auto; }
+
+.summary {
+  width: 75%;
+  margin: auto; }
 
 .main {
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap; }
 
 .main::before {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,5 +58,50 @@ h1 {
   color: black;
   background: black;
   content: ''; }
+
+.footer {
+  text-align: center;
+  align-content: space-between;
+  padding: 10% 0; }
+  .footer a:link {
+    margin-right: 15px; }
+
+.sidebar {
+  text-align: center;
+  align-content: space-between;
+  padding: 2% 0;
+  margin: 10px; }
+
+.sidebar {
+  margin-left: 0%;
+  align-content: center; }
+
+.sidebar .wrapper {
+  padding: 2%;
+  display: flex;
+  width: 100%; }
+
+.sidebar h3.select {
+  margin: 0%;
+  padding: 2%;
+  display: inline; }
+
+.sidebar h3.archives {
+  padding: 2%;
+  margin: 0%; }
+
+.sidebar h3.resources {
+  padding: 2%;
+  margin: 0%; }
+
+.sidebar ul {
+  margin: 5%;
+  padding: 5%; }
+
+.sidebar li {
+  display: block;
+  padding-top: 1%;
+  margin-bottom: 15%;
+  list-style-type: none; }
 
 /*# sourceMappingURL=style.css.map */

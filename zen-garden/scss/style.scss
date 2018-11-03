@@ -1,7 +1,12 @@
 /* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
 /*variables
-
 */
+$main-bg: white;
+$secondary-bg: gray;
+$font-color: black;
+$alt-font-color: blue;
+
+
 /*breakpoints
 
 */
@@ -11,13 +16,13 @@
 body {
     display: flex;
     flex-flow: column nowrap;
-    background-color: darkblue;
-    color: white;
+    background-color: $main-bg;
+    color: $font-color;
 
     margin: auto;
 }
 .page-wrapper > div {
-    max-width: 90vw;
+
     margin: auto;
 }
 
@@ -26,7 +31,7 @@ header {
     padding: 1em 0 2em 0;
     width: auto;
     text-align: center;
-    color: blue;
+    color: $alt-font-color;
     background-color: yellow;
     border-radius: 0 0 150% 150%;
 }
@@ -41,19 +46,29 @@ h1 {
     /*add CSS Rocket as background*/
 }
 .preamble{
-    background-color: darkgray;
-    color: blue;
+    background-color: $secondary-bg;
+    color: $alt-font-color;
+    width: 75%;
+    margin: auto;
 }
 
 .summary{
+    width: 75%;
+    margin: auto;
 
 }
 .main{
     position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.main:nth-child(even) {
+
 }
 
 .main::before{
     //planet css image
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,9 +87,59 @@ h1 {
 
 .requirements{}
 
-.footer{}
+.footer{
+    text-align: center;
+    align-content: space-between;
+    padding: 10% 0;
+    a:link{
+        margin-right: 15px;
+    }
+}
 
-.sidebar{}
+.sidebar{
+    text-align: center;
+    align-content: space-between;
+    padding: 2% 0;
+    margin: 10px;
+}
+.sidebar {
+    margin-left: 0%;
+    align-content: center;
+}
+.sidebar .wrapper {
+    padding: 2%;
+    display: flex;
+    width: 100%;
+}
+.sidebar h3.select {
+
+    margin: 0%;
+    padding: 2%;
+    display: inline;
+
+
+}
+.sidebar h3.archives {
+    padding: 2%;
+    margin: 0%;
+
+
+}
+.sidebar h3.resources {
+    padding: 2%;
+    margin: 0%;
+
+}
+.sidebar ul {
+    margin: 5%;
+    padding: 5%;
+}
+.sidebar li {
+    display: block;
+    padding-top: 1%;
+    margin-bottom: 15%;
+    list-style-type: none;
+}
 
 .design-archives{}
 
