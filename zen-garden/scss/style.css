@@ -34,7 +34,7 @@ h1 {
 .preamble {
   background-color: gray;
   color: blue;
-  width: 75%;
+  width: 80%;
   margin: auto; }
 
 .summary {
@@ -42,36 +42,20 @@ h1 {
   margin: auto; }
 
 .main {
-  position: relative;
   display: flex;
   flex-flow: column nowrap;
-  margin: 1em; }
+  margin: 0 auto;
+  width: 90%; }
 
 .main > div:nth-child(even) > h3 {
   text-align: center; }
 .main > div:nth-child(even) > p {
-  margin-left: 15%;
-  margin-right: 5%; }
+  margin: auto; }
 
 .main > div:nth-child(odd) > h3 {
   text-align: center; }
 .main > div:nth-child(odd) > p {
-  margin-left: 5%;
-  margin-right: 15%;
-  text-align: left; }
-
-.main::before {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 2em solid black;
-  color: black;
-  background: black;
-  content: ''; }
+  margin: auto; }
 
 .footer {
   text-align: center;

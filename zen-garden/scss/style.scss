@@ -48,7 +48,7 @@ h1 {
 .preamble{
     background-color: $secondary-bg;
     color: $alt-font-color;
-    width: 75%;
+    width: 80%;
     margin: auto;
 }
 
@@ -58,18 +58,17 @@ h1 {
 
 }
 .main{
-    position: relative;
     display: flex;
     flex-flow: column nowrap;
-    margin: 1em;
+    margin: 0 auto;
+    width: 90%;
 }
 .main>div:nth-child(even) {
     & > h3 {
         text-align: center;
     }
     & > p {
-        margin-left: 15%;
-        margin-right: 5%
+        margin: auto;
     }
 }
 .main>div:nth-child(odd) {
@@ -77,25 +76,8 @@ h1 {
         text-align: center;
     }
     & > p {
-        margin-left: 5%;
-        margin-right: 15%;
-        text-align: left;
+        margin: auto;
     }
-}
-
-.main::before{
-    //planet css image
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100px;
-    height:100px;
-    border-radius: 50%;
-    border:2em solid black;
-    color: black;
-    background: black;
-    content: '';
 }
 
 .supporting{}
