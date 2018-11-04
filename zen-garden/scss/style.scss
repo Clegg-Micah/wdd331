@@ -1,11 +1,12 @@
 /* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
-/*variables
-*/
-$main-bg: white;
-$secondary-bg: gray;
-$font-color: black;
-$alt-font-color: blue;
+/*variables*/
+@import 'partials/variables';
 
+/*breakpoints */
+@import 'partials/breakpoints';
+
+/* Mixins  */
+@import 'partials/mixins';
 
 /*breakpoints
 
@@ -32,7 +33,7 @@ header {
     width: auto;
     text-align: center;
     color: $alt-font-color;
-    background-color: yellow;
+    background-color: $big-sun;
     border-radius: 0 0 150% 150%;
 }
 
