@@ -44,7 +44,21 @@ h1 {
 .main {
   position: relative;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  margin: 1em; }
+
+.main > div:nth-child(even) > h3 {
+  text-align: center; }
+.main > div:nth-child(even) > p {
+  margin-left: 15%;
+  margin-right: 5%; }
+
+.main > div:nth-child(odd) > h3 {
+  text-align: center; }
+.main > div:nth-child(odd) > p {
+  margin-left: 5%;
+  margin-right: 15%;
+  text-align: left; }
 
 .main::before {
   display: none;

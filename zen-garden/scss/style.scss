@@ -61,9 +61,26 @@ h1 {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
+    margin: 1em;
 }
-.main:nth-child(even) {
-
+.main>div:nth-child(even) {
+    & > h3 {
+        text-align: center;
+    }
+    & > p {
+        margin-left: 15%;
+        margin-right: 5%
+    }
+}
+.main>div:nth-child(odd) {
+    & > h3 {
+        text-align: center;
+    }
+    & > p {
+        margin-left: 5%;
+        margin-right: 15%;
+        text-align: left;
+    }
 }
 
 .main::before{
