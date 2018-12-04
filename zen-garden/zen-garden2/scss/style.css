@@ -2,8 +2,112 @@
 /*variables*/
 /*color variables*/
 /*breakpoints */
-/* Mixins  */
+/* Typography */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Nanum+Brush+Script|Nanum+Myeongjo|Nunito+Sans|Permanent+Marker");
 body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px; }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Permanent Marker";
+  color: coral;
+  font-size: 4em; }
+
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 5px;
+  padding: 30px;
+  color: gray;
+  font-size: 2em; }
+
+h3 {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Permanent Marker";
+  font-size: 40px;
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  color: coral;
+  font-weight: bold;
+  font-size: 36px;
+  transform: rotate(5deg) scale(1); }
+
+/* Mixins  */
+/*layout */
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, 8.3%);
+  grid-template-rows: repeat(8, 12.5vh);
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid; }
+  .intro > header {
+    grid-row: 1 / 3;
+    grid-column: 1 / 6;
+    width: 100%; }
+  .intro > .summary {
+    grid-row: 4 / 6;
+    grid-column: 1 / 6; }
+  .intro > .preamble {
+    grid-row: 6/8;
+    grid-column: 1 / 6; }
+
+.main {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 12.5vh);
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  grid-row: 1 / 9;
+  grid-column: 7 / 9; }
+  .main > .explanation {
+    grid-row: 4 / 9;
+    grid-column: 2 / 9; }
+  .main > .participation {
+    grid-row: 4 / 9;
+    grid-column: 3 / 9; }
+  .main > .benefits {
+    grid-row: 4 / 9;
+    grid-column: 4 / 9; }
+  .main > .requirements {
+    grid-row: 4 / 9;
+    grid-column: 5 / 9; }
+
+.sidebar {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .sidebar.wrapper.design-selection.select {
+    grid-row: 3 / 8;
+    grid-column: 7 / 10; }
+  .sidebar.wrapper.design-archives.archives {
+    grid-row: 4 / 8;
+    grid-column: 7 / 10; }
+  .sidebar.wrapper.zen-resources.resources {
+    grid-row: 5 / 8;
+    grid-column: 7 / 10; }
+
+footer {
+  grid-row: 9 / 10;
+  grid-column: 3 / 8; }
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
   background-color: white;
   color: black; }
 
@@ -17,57 +121,5 @@ header {
 .preamble {
   background-color: gray;
   color: blue; }
-
-/*layout */
-.page-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  grid-template-rows: repeat(5, 1fr);
-  width: 100%; }
-
-@media (min-width: 46.8em) {
-  max-height: calc(25vw *0.75);
-  .intro {
-    grid-row: 1 / 2;
-    grid-column: 1 / 5; }
-    .introheader {
-      grid-row: 1 / 2;
-      grid-column: 1 / 10; }
-    .intro.summary {
-      grid-row: 2 / 3;
-      grid-column: 1 / 10; }
-    .intro.preamble {
-      grid-row: 3/4;
-      grid-column: 3 / 8; }
-
-  .main supporting {
-    grid-row: 4 / 9;
-    grid-column: 2 / 9; }
-    .main supporting.explanation {
-      grid-row: 4 / 9;
-      grid-column: 2 / 9; }
-    .main supporting.participation {
-      grid-row: 4 / 9;
-      grid-column: 3 / 9; }
-    .main supporting.benefits {
-      grid-row: 4 / 9;
-      grid-column: 4 / 9; }
-    .main supporting.requirements {
-      grid-row: 4 / 9;
-      grid-column: 5 / 9; }
-
-  .sidebar.wrapper.design-selection.select {
-    grid-row: 3 / 8;
-    grid-column: 7 / 10; }
-  .sidebar.wrapper.design-archives.archives {
-    grid-row: 4 / 8;
-    grid-column: 7 / 10; }
-  .sidebar.wrapper.zen-resources.resources {
-    grid-row: 5 / 8;
-    grid-column: 7 / 10; }
-
-  footer {
-    grid-row: 9 / 10;
-    grid-column: 3 / 8; } }
 
 /*# sourceMappingURL=style.css.map */
