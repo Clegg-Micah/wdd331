@@ -8,12 +8,9 @@
 /* Mixins  */
 @import 'partials/mixins';
 
-/*breakpoints
+// Typography
+@import 'partials/typography';
 
-*/
-/* Mixins
-
-*/
 body {
     display: flex;
     flex-flow: column nowrap;
@@ -47,8 +44,8 @@ h1 {
     /*add CSS Rocket as background*/
 }
 .preamble{
-    background-color: $secondary-bg;
-    color: $alt-font-color;
+    // background-color: $secondary-bg;
+    // color: $alt-font-color;
     width: 80%;
     margin: auto;
 }
@@ -65,9 +62,7 @@ h1 {
     width: 90%;
 }
 .main>div:nth-child(even) {
-    & > h3 {
-        text-align: center;
-    }
+
     & > p {
         margin: auto;
     }
