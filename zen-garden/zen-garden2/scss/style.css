@@ -1,0 +1,73 @@
+/* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
+/*variables*/
+/*color variables*/
+/*breakpoints */
+/* Mixins  */
+body {
+  background-color: white;
+  color: black; }
+
+header {
+  text-align: center;
+  color: blue;
+  background-color: yellow;
+  border-radius: 0 0 150% 150%; }
+
+/*add CSS Rocket as background*/
+.preamble {
+  background-color: gray;
+  color: blue; }
+
+/*layout */
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 1fr);
+  width: 100%; }
+
+@media (min-width: 46.8em) {
+  max-height: calc(25vw *0.75);
+  .intro {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5; }
+    .introheader {
+      grid-row: 1 / 2;
+      grid-column: 1 / 10; }
+    .intro.summary {
+      grid-row: 2 / 3;
+      grid-column: 1 / 10; }
+    .intro.preamble {
+      grid-row: 3/4;
+      grid-column: 3 / 8; }
+
+  .main supporting {
+    grid-row: 4 / 9;
+    grid-column: 2 / 9; }
+    .main supporting.explanation {
+      grid-row: 4 / 9;
+      grid-column: 2 / 9; }
+    .main supporting.participation {
+      grid-row: 4 / 9;
+      grid-column: 3 / 9; }
+    .main supporting.benefits {
+      grid-row: 4 / 9;
+      grid-column: 4 / 9; }
+    .main supporting.requirements {
+      grid-row: 4 / 9;
+      grid-column: 5 / 9; }
+
+  .sidebar.wrapper.design-selection.select {
+    grid-row: 3 / 8;
+    grid-column: 7 / 10; }
+  .sidebar.wrapper.design-archives.archives {
+    grid-row: 4 / 8;
+    grid-column: 7 / 10; }
+  .sidebar.wrapper.zen-resources.resources {
+    grid-row: 5 / 8;
+    grid-column: 7 / 10; }
+
+  footer {
+    grid-row: 9 / 10;
+    grid-column: 3 / 8; } }
+
+/*# sourceMappingURL=style.css.map */
