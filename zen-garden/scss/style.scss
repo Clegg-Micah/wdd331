@@ -29,23 +29,16 @@ header {
     padding: 1em 0;
     width: auto;
     text-align: center;
-    color: $alt-font-color;
     background-color: $big-sun;
     border-radius: 0 0 150% 150%;
 }
 
-header>* {
 
-}
-h1 {
-    margin: 0;
-}
 .intro{
     /*add CSS Rocket as background*/
 }
 .preamble{
     // background-color: $secondary-bg;
-    // color: $alt-font-color;
     width: 80%;
     margin: auto;
 }
@@ -60,6 +53,7 @@ h1 {
     flex-flow: column nowrap;
     margin: 0 auto;
     width: 90%;
+    background-color: gray;
 }
 .main>div:nth-child(even) {
 

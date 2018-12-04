@@ -3,12 +3,42 @@
 /*color variables*/
 /*breakpoints */
 /* Mixins  */
-/*breakpoints
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Nanum+Brush+Script|Nanum+Myeongjo|Nunito+Sans|Permanent+Marker");
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px; }
 
-*/
-/* Mixins
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Permanent Marker";
+  color: coral;
+  font-size: 175px; }
 
-*/
+h2 {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 5px;
+  padding: 30px;
+  color: gray;
+  font-size: 75px; }
+
+h3 {
+  margin: 5px;
+  padding: 10px;
+  font-family: "Permanent Marker";
+  font-size: 40px;
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  color: coral;
+  font-weight: bold;
+  font-size: 36px;
+  transform: rotate(5deg) scale(1); }
+
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -23,19 +53,13 @@ header {
   padding: 1em 0;
   width: auto;
   text-align: center;
-  color: blue;
   background-color: yellow;
   border-radius: 0 0 150% 150%; }
-
-h1 {
-  margin: 0; }
 
 .intro {
   /*add CSS Rocket as background*/ }
 
 .preamble {
-  background-color: gray;
-  color: blue;
   width: 80%;
   margin: auto; }
 
@@ -47,10 +71,9 @@ h1 {
   display: flex;
   flex-flow: column nowrap;
   margin: 0 auto;
-  width: 90%; }
+  width: 90%;
+  background-color: gray; }
 
-.main > div:nth-child(even) > h3 {
-  text-align: center; }
 .main > div:nth-child(even) > p {
   margin: auto; }
 

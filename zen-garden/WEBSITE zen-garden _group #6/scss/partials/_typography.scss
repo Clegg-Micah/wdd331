@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Nanum+Brush+Script|Nanum+Myeongjo|Nunito+Sans|Permanent+Marker');
+
+$all-text: 'Nunito Sans', sans-serif;
+$titles: 'Permanent Marker';
+
+body{
+  margin: 0;
+  font-family: $all-text;
+  font-size: 18px;
+}
+
+.intro{
+}
+
+h1{
+  margin: 0;
+  padding: 0;
+  font-family: $titles;
+  color: coral;
+  font-size: 175px;
+}
+
+h2{
+  font-family: $all-text;
+  margin: 5px;
+  padding: 30px;
+  color: gray;
+  font-size: 75px;
+}
+
+h3{
+  margin: 5px;
+  padding: 10px;
+  font-family: $titles;
+  font-size: 40px;
+  // font-style: bold;
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: coral;
+  font-weight: bold;
+  font-size: 36px;
+  transform: rotate(5deg) scale(1);
+}

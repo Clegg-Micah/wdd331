@@ -1,12 +1,19 @@
 /* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
+
+/*layout */
+@import 'partials/layout';
+
 /*variables*/
 @import 'partials/variables';
 
 /*breakpoints */
 @import 'partials/breakpoints';
 
+//Typography
+@import 'partials/typography';
+
 /* Mixins  */
-@import 'partials/mixins';
+// @import 'partials/mixins';
 
 
 body {
@@ -25,7 +32,7 @@ body {
 
 header {
     //Pretty cool sun right?
-	
+
     //padding: 1em 0;
     //width: auto;
     text-align: center;
@@ -141,8 +148,3 @@ header {
 //.design-archives{}
 
 //.zen-resources{};
-
-
-/*layout */
-@import 'partials/layout';
-
