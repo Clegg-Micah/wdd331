@@ -5,8 +5,14 @@
 /*breakpoints */
 @import 'partials/breakpoints';
 
+/* Typography */
+@import 'partials/typography';
+
 /* Mixins  */
-@import 'partials/mixins';
+//@import 'partials/mixins';
+
+/*layout */
+@import 'partials/layout';
 
 
 body {
@@ -25,7 +31,7 @@ body {
 
 header {
     //Pretty cool sun right?
-	
+
     //padding: 1em 0;
     //width: auto;
     text-align: center;
@@ -143,6 +149,5 @@ header {
 //.zen-resources{};
 
 
-/*layout */
-@import 'partials/layout';
+
 
