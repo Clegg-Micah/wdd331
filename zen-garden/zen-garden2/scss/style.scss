@@ -1,4 +1,4 @@
-/* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled.
+/* This file currently writes to a CSS file in the same folder, this is just for testing purposes while I have watch enabled. */
 /*variables*/
 @import 'partials/variables';
 
@@ -9,21 +9,22 @@
 @import 'partials/typography';
 
 /* Mixins  */
-//@import 'partials/mixins';
+@import 'partials/mixins';
 
 /*layout */
 @import 'partials/layout';
 
 
 body {
+    position: relative;
     // display: flex;
     // flex-flow: column;
     // align-items: flex-start;
     background-color: $main-bg;
     color: $font-color;
 
-    //margin: auto;
 }
+
 //.page-wrapper > div {
 
     //margin: auto;
