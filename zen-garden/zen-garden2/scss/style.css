@@ -4,30 +4,34 @@
 /*breakpoints */
 /* Typography */
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Nanum+Brush+Script|Nanum+Myeongjo|Nunito+Sans|Permanent+Marker");
+/*color variables*/
 body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
-  font-size: 18px; }
+  background-color: white;
+  color: black;
+  background-color: gray; }
 
 h1 {
   margin: 0;
   padding: 0;
   font-family: "Permanent Marker";
-  color: coral;
-  font-size: 4em; }
+  color: white;
+  font-size: 5rem;
+  transform: rotate(-15deg); }
 
 h2 {
   font-family: "Nunito Sans", sans-serif;
   margin: 5px;
   padding: 30px;
-  color: gray;
-  font-size: 2em; }
+  color: white;
+  font-size: 2rem; }
 
 h3 {
   margin: 5px;
   padding: 10px;
   font-family: "Permanent Marker";
-  font-size: 40px;
+  font-size: 1rem;
   text-align: left; }
 
 a {
@@ -42,16 +46,14 @@ a:hover {
   transition-duration: 1s;
   transition-property: transform; }
 
-.hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
-  transform: translateX(-8px); }
-
 li {
   list-style-type: none; }
 
 .design-name {
-  background-color: gray;
-  border-radius: 50%;
   padding: 2px; }
+
+.participation {
+  font-size: 8px; }
 
 /* Mixins  */
 /*layout */
@@ -65,7 +67,8 @@ li {
   grid-column: col 1 / span 5;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 375px 30px 1fr 75px; }
 
 header {
   grid-column: 1 / 5;
@@ -74,11 +77,11 @@ header {
 
 .summary {
   grid-column: 1 / 4;
-  grid-row: 2; }
+  grid-row: 4; }
 
 .preamble {
   grid-column: 1 / 4;
-  grid-row: 3; }
+  grid-row: 6; }
 
 .main {
   grid-column: col 5 / span 3;
@@ -111,32 +114,20 @@ header {
 .wrapper {
   background-color: lightgray; }
   .wrapper > .design-selection {
-    grid-column: 1/ 2;
+    grid-column: 1/ 3;
     grid-row: 1; }
   .wrapper > .design-archives {
-    grid-column: 1 / 2;
+    grid-column: 1 / 3;
     grid-row: 2; }
-  .wrapper.zen-resources {
-    grid-column: 1 / 2;
+  .wrapper > .zen-resources {
+    grid-column: 1 / 3;
     grid-row: 3; }
 
 footer {
-  grid-row: 9 / 10;
-  grid-column: 3 / 8; }
-
-body {
-  background-color: white;
-  color: black; }
+  grid-column: 6 / span 3;
+  grid-row: 9; }
 
 header {
-  text-align: center;
-  color: blue;
-  background-color: yellow;
-  border-radius: 0 0 150% 150%; }
-
-/*add CSS Rocket as background*/
-.preamble {
-  background-color: gray;
-  color: blue; }
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNDY5IiB2aWV3Qm94PSIwIDAgNTAwIDQ2OC41Ij48cGF0aCBkPSJNNTAxLjUgMjM2LjVjMCAwLTEzOC41IDEyLjEtMTM5LjUgMTcuOCAtMS4yIDYuOCA1NS42IDUxLjEgNTUuNiA1MS4xcy02Ni4xLTIwLjItNjkuNC0xNWMtMy42IDUuNyA3Ni43IDExOS40IDc2LjcgMTE5LjRzLTEwMS4zLTkyLjEtMTA4LjUtODcuN2MtNS45IDMuNyA4LjggNzcuMSA4LjggNzcuMXMtMzkuNS02NC43LTQ1LjYtNjMuOWMtNC4xIDAuNi0xNi43IDEzMy44LTE2LjcgMTMzLjhzLTE1LjQtMTM0LjUtMjQuNC0xMzcuNGMtNi4yLTItNTUuMyA1OS4yLTU1LjMgNTkuMnMyNC4yLTc1LjYgMTguMy04MS4xYy0yLjQtMi4zLTk4LjUgODQuNC05OC41IDg0LjRzODMuMy0xMDIuMyA4MC0xMDguMiAtNDkuNyAxMy41LTQ5LjcgMTMuNSAzOS00Mi4yIDM4LjItNDcuM2MtMC44LTUuMS0xNjktMTUuNy0xNjktMTUuN3MxNjguMy0xMS43IDE2OS4yLTE3LjNjMS4zLTcuOS02MS4yLTU4LjktNjEuMi01OC45czcyLjQgMjYuNSA3NS4zIDIyYzMtNC43LTgyLjUtMTA2LjMtODIuNS0xMDYuM3MxMDAuOSA4NC41IDEwNS43IDgwLjhjNC44LTMuNy03LjQtNzIuNy03LjQtNzIuN3MzNSA1Ny42IDQxLjYgNTUuOGM3LjYtMiAyMy44LTEzNy45IDIzLjgtMTM3LjlzMTEuMyAxMzUuNCAxNi44IDEzNi40YzUuOCAxLjEgNDUuOC02My4xIDQ1LjgtNjMuMXMtMTkuMiA3Mi0xNC43IDc0LjZjNyA0LjEgMTA5LjMtNzguMyAxMDkuMy03OC4zcy04NC42IDk4LjktODIgMTAyLjFjNC40IDUuNiA4MS4zLTE3LjggODEuMy0xNy44cy02NS4yIDQ2LjktNjMuNiA1Mi43QzM2Mi4yIDIxNy40IDUwMS41IDIzNi41IDUwMS41IDIzNi41eiIgZmlsbD0iI0YzOEUzQiIvPjwvc3ZnPg==) no-repeat center center; }
 
 /*# sourceMappingURL=style.css.map */
