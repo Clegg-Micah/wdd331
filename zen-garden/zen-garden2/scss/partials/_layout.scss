@@ -62,11 +62,17 @@
 
 
 //*first part of 1-3 rows*//
+.main>*{
+    max-width: 95vw;
+    margin: auto;
+}
+@include breakpoint(medium) {
 .page-wrapper {
         display: grid;
     grid-gap: 5px;
         grid-template-columns: repeat(12, [col] 8.3333% ) ;
         grid-template-rows: repeat(9, [row] 100px  );
+    max-width: 100vw;
 
     }
 
@@ -75,23 +81,26 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 375px 30px 1fr 75px;
   }
 
     header {
         grid-column: 1 / 5;
         grid-row: 1;
         width: 100%;
+        @include star(1em, $star-color, 10em, 26em);
             }
 
     .summary {
         grid-column: 1 / 4;
-        grid-row: 4;
+        grid-row: 2;
+        @include star(1em, $star-color, 13em, 27em);
           }
 
     .preamble {
         grid-column: 1 / 4;
         grid-row: 6;
+        grid-row: 3;
+        @include star(1em, $star-color, 17em, 27em);
           }
 
 
@@ -106,19 +115,22 @@
         .explanation {      //So What is This About?
             grid-column: 1 / 2;
             grid-row: 1;
+            @include star(1em, $star-color, 20em, 32em);
         }
 
         .participation  {   //Participation
             grid-column: 3 / 4;
             grid-row: 1;
+            @include star(1em, $star-color, 26em, 30em);
         }
         .benefits  {        //Benefits
             grid-column: 1 / 2;
-            grid-row: 2
+            grid-row: 2;
+            @include star(1em, $star-color, 26em, 24em);
         }
         .requirements  {    //Requirements
             grid-column: 3 / 4;
-            grid-row: 2
+            grid-row: 2;
         }
 
 
@@ -160,3 +172,4 @@
         grid-column: 6 / span 3;
         grid-row: 9;
     }
+}

@@ -1,0 +1,38 @@
+@mixin star($size, $color, $posX, $posY) {
+    //Pos X and Y are in em
+    &:before {
+        width: 0;
+        height: 0;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: ($size*2) solid $color;
+        position: absolute;
+        content: "";
+        top: $posY;
+        left: $posX;
+        z-index: -1;
+    }
+    &:after {
+        width: 0;
+        height: 0;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: ($size*2) solid $color;
+        position: absolute;
+        content: "";
+        top: ($posY + ($size/2));
+        left: $posX;
+        z-index: -1;
+    }
+}
+@mixin breakpoint($point) {
+    @if $point == small {
+        @media (min-width: 40em) { @content ; }
+    }
+    @else if $point == medium {
+        @media (min-width: 60em) { @content ; }
+    }
+    @else if $point == large {
+        @media (min-width: 70em) { @content ; }
+    }
+}
