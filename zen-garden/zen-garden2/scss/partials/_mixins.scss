@@ -25,3 +25,14 @@
         z-index: -1;
     }
 }
+@mixin breakpoint($point) {
+    @if $point == small {
+        @media (min-width: 40em) { @content ; }
+    }
+    @else if $point == medium {
+        @media (min-width: 60em) { @content ; }
+    }
+    @else if $point == large {
+        @media (min-width: 70em) { @content ; }
+    }
+}
