@@ -66,7 +66,62 @@
 //     max-width: 95vw;
 //     margin: auto;
 // }
-@include breakpoint(medium) {
+
+//Alien insertion
+.design-name {
+    @include alien1;
+}
+.design-archives {
+    @include alien2;
+}
+.zen-resources {
+    @include alien3;
+}
+.next {
+    @include alien4;
+}
+.designer-name {
+    @include alien5;
+}
+nav {
+    position: relative;
+    @include alien6;
+}
+nav :before {
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: -50px;
+    @include alien1;
+    transition: 2s;
+}
+nav:hover :before {
+    transform: translateX(-50px);
+}
+header {
+    @include sun;
+}
+.preamble {
+    @include big-dipper;
+}
+.explanation {
+    @include planet-yellow;
+}
+.participation {
+    @include planet-earth;
+}
+.benefits {
+    @include planet-purple;
+}
+.requirements {
+    @include planet-blue;
+}
+footer {
+    @include planet-orange;
+}
+@include breakpoint(small) {
 .page-wrapper {
         display: grid;
     grid-gap: 5px;
