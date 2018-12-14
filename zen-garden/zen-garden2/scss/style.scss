@@ -11,11 +11,13 @@
 /* Mixins  */
 @import 'partials/mixins';
 
-
+/*layout */
+@import 'partials/layout';
 
 // graphics
 @import 'partials/aliens';
 @import 'partials/planets';
 @import 'partials/footerIcons';
-/*layout */
-@import 'partials/layout';
+@import 'partials/spaceship';
+
+
