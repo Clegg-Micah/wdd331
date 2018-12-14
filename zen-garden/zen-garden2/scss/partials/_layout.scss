@@ -67,6 +67,70 @@
 //     margin: auto;
 // }
 
+/* ********************************
+***** Mobile Layout ***************
+********************************* */
+.page-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+.main>* {
+    width: auto;
+}
+header {
+    position: relative;
+}
+header:before {
+    content:"";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    @include sun;
+    background-size: contain;
+    top: 0;
+    right: 50px;
+}
+.preamble {
+
+    &:before {
+        @include big-dipper;
+    }
+}
+.explanation {
+    @include planet-yellow;
+    &:before {
+
+    }
+}
+.participation {
+    @include planet-earth;
+    &:before {
+
+    }
+}
+.benefits {
+    @include planet-purple;
+    &:before {
+
+    }
+}
+.requirements {
+    @include planet-blue;
+    &:before {
+
+    }
+}
+footer {
+    @include planet-orange;
+    &:before {
+
+    }
+}
+
+
+
+
 //Alien insertion
 .design-name {
     @include alien1;
@@ -100,28 +164,7 @@ nav :before {
 nav:hover :before {
     transform: translateX(-50px);
 }
-header {
-    @include sun;
-}
-.preamble {
-    @include big-dipper;
-}
-.explanation {
-    @include planet-yellow;
-}
-.participation {
-    @include planet-earth;
-}
-.benefits {
-    @include planet-purple;
-}
-.requirements {
-    @include planet-blue;
-}
-footer {
-    @include planet-orange;
-}
-@include breakpoint(small) {
+@include breakpoint(medium) {
 .page-wrapper {
         display: grid;
     grid-gap: 5px;

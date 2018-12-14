@@ -4,13 +4,13 @@ $break-large: 67.5em;  //1080px
 
 @mixin breakpoint($break) {
 @if $break == small {
-@media (max-width: $break-small) { @content; }
+@media screen and (max-width: $break-small) { @content; }
 }
 @else if $break == medium {
-@media (max-width: $break-medium) { @content; }
+    @media screen and (max-width: $break-medium) { @content; }
 }
 @else if $break == large {
-@media (max-width: $break-large) { @content; }
+    @media screen and (max-width: $break-large) { @content; }
 } @else {
 @media ($break) { @content; }
 }
