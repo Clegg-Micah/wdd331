@@ -41,7 +41,7 @@ h2{
 
 h3{
   margin: 5px;
-  padding: 10px;
+  padding: 2px;
   font-family: $titles;
   font-size: 1rem;
   text-align: left;
@@ -50,34 +50,19 @@ h3{
 a:link {
 	font-weight: bold;
 	text-decoration: none;
-	color: #392758;
+	color: darkgray;
 	}
 a:visited {
 	font-weight: bold;
 	text-decoration: none;
-	color: #f5a562;
+	color: #392758;
 	}
 a:hover, a:focus, a:active {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 	color: #f5a562;
   transform: scale(1);
 	}
 
-// a{
-//   text-decoration: none;
-// }
-// a:hover{
-//   display: inline-block;
-//   color: $hover-color;
-//   font-weight: bold;
-//   font-size: 36px;
-//   transform:  translateX(-150) scale(1);
-//   transition-duration: 1s;
-//   transition-property: transform;
-// }
-// .hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
-//   transform: translateX(-8px);
-// }
 
 li{list-style-type: none;}

@@ -168,12 +168,12 @@ body {
   .benefits{
     position: absolute;
     bottom: -5%;
-    left: 38%;
+    left: 42%;
     width: 500px;
     height: 300px;
     @include spaceship;
     background-size: contain;
-    overflow: visible;
+    overflow: hidden;
     font-size: 12px;
     display: flex;
     flex-direction: column;
@@ -182,10 +182,12 @@ body {
     transform: rotate(10deg);
 
     h3{
+      margin: 2px 0;
       color: red;
     }
 
-    p {padding: 5px;
+    p {
+      margin: 0;
       opacity: 0;
       height: 0;
       background-color:rgba(0,0,0,0.5);
@@ -201,7 +203,7 @@ body {
 
   .requirements{
     position: absolute;
-    bottom: 61%;
+    bottom: 50%;
     right: 16%;
     width: 375px;
     height: 375px;
@@ -232,17 +234,29 @@ body {
   footer{
     position: absolute;
     top: 85%;
-    right: 72%;
-    width: 468px;
-    height: 150px;
+    right: 68%;
+    width: 497px;
+    height: 259px;
     @include planet-orange;
-  //  background-size: contain;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    a{
+      padding: 5px;
+      color: white;
+      font-size: 20px;
+    }
+    a:hover, a:focus, a:active {
+      text-decoration: none;
+      font-size: 40px;
+    	color: #f5a562;
+      transform: scale(1);
+    	}
+
   }
 }
 
@@ -250,7 +264,7 @@ body {
   grid-column: 11 / 13;
   grid-row: 1 / 8;
   font-size: 14px;
-  overflow: hidden;
+  overflow: visible;
 
   li {
     list-style-type: none;
@@ -270,15 +284,9 @@ body {
 // /* ********************************
 // ***** Mobile Layout ***************
 // ********************************* */
-// .main>* {
-//     width: auto;
-// }
-// header {
-//     position: relative;
-// }
-//
-//
-//
+
+
+
 // //Alien insertion
 // .design-name {
 //     @include alien1;
@@ -294,115 +302,4 @@ body {
 // }
 // .designer-name {
 //     @include alien5;
-// }
-// nav {
-//     position: relative;
-//     @include alien6;
-// }
-// nav :before {
-//     content:"";
-//     position: absolute;
-//     width: 100px;
-//     height: 100px;
-//     top: 0;
-//     left: -50px;
-//     @include alien1;
-//     transition: 2s;
-// }
-// nav:hover :before {
-//     transform: translateX(-50px);
-// }
-// @include breakpoint(medium) {
-// .page-wrapper {
-//         display: grid;
-//         grid-gap: 5px;
-//        grid-template-columns: repeat(12, [col] 8.3333% ) ;
-//        grid-template-rows: repeat(7, [row]  14.28%  );
-//  margin: 0;
-//  padding: 0;
-//  position: relative;
-//
-//
-//     }
-//
-//   .intro {
-//     grid-column: 1 / span 3;
-//     grid-row: 1 / span 6;
-//     }
-//       #zen-intro{
-//          @include sun;
-//         grid-column: 1 / span 5;
-//         grid-row: 1 / span 2;
-//        width: 100%;
-//             }
-//
-//
-//     #zen-summary {
-//        grid-row: 2;
-//           }
-//
-//     #zen-preamble{
-//      @include planet-earth;
-//         grid-column: 2 ;
-//         grid-row: 4;
-//           }
-//
-//
-//     //Columns 7-12 after the intro
-//     .main {
-//
-//
-//         .explanation {      //So What is This About?
-//           @include planet-yellow;
-//             grid-column: 9;
-//             grid-row: 2;
-//         }
-//         //
-//          .participation  {   //Participation
-//            @include planet-blue;
-//              grid-column: 2;
-//              grid-row: 4;
-//
-//          }
-//          .benefits  {        //Benefits
-//            @include planet-purple;
-//             grid-column: 1 / span 2;
-//             grid-row: 6;
-//
-//          }
-//
-//   }
-//
-//     //Sidebar
-//     .sidebar {
-//       grid-column: col 11 / span 3;
-//       transform: translateX(30px);
-//   }
-//
-//       .wrapper {
-//
-//             &> .design-selection {
-//                  //Select a Design
-//                     grid-column:  1/ 3;
-//                     grid-row: 1;
-//             }
-//             &> .design-archives {
-//                      //Archives
-//                     grid-column: 1 / 3;
-//                     grid-row: 2;
-//             }
-//             &> .zen-resources {
-//                  //Resources
-//                     grid-column: 1 / 3;
-//                     grid-row: 3;
-//             }
-//         }
-//
-//
-//     //Footer
-//     footer  {
-//       @include planet-orange;
-//         grid-column: 6 / span 3;
-//         grid-row: 9;
-//     }
 // }
