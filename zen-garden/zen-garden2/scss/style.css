@@ -114,7 +114,7 @@ body {
     .intro .summary:hover p {
       opacity: 1;
       height: auto;
-      transition: all 1s; }
+      transition: all .5s linear; }
   .intro .preamble {
     position: absolute;
     top: 9%;
@@ -136,7 +136,8 @@ body {
       background-color: rgba(0, 0, 0, 0.5); }
     .intro .preamble:hover p {
       opacity: 1;
-      height: auto; }
+      height: auto;
+      transition: all .5s linear; }
 
 .main {
   grid-column: 1 / 11;
@@ -163,7 +164,8 @@ body {
       background-color: rgba(0, 0, 0, 0.5); }
     .main .explanation:hover p {
       opacity: 1;
-      height: auto; }
+      height: auto;
+      transition: all .5s linear; }
   .main .participation {
     position: absolute;
     bottom: 35%;
@@ -185,7 +187,8 @@ body {
       background-color: rgba(0, 0, 0, 0.5); }
     .main .participation:hover p {
       opacity: 1;
-      height: auto; }
+      height: auto;
+      transition: all .5s linear; }
   .main .benefits {
     position: absolute;
     bottom: 2%;
@@ -210,7 +213,8 @@ body {
       background-color: rgba(0, 0, 0, 0.5); }
     .main .benefits:hover p {
       opacity: 1;
-      height: auto; }
+      height: auto;
+      transition: all .5s linear; }
   .main .requirements {
     position: absolute;
     bottom: 50%;
@@ -233,13 +237,14 @@ body {
     .main .requirements:hover p {
       opacity: 1;
       height: auto;
-      transform: translateX(20px); }
+      transform: translateX(-20px);
+      transition: all .5s linear; }
   .main footer {
     position: absolute;
     top: 76%;
     right: 67%;
     width: 500px;
-    height: 225px;
+    height: 251px;
     background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHN0eWxlPi5he2ZpbGw6IzE0Mzk2NDt9PC9zdHlsZT48Y2lyY2xlIGN4PSIyNDcuOCIgY3k9IjI1MC4yIiByPSIyNDQuMiIgZmlsbD0iI0YzOEUzQiIvPjxwYXRoIGQ9Ik00NzEuOCAxNDUuOWMwLTEzLjgtNDIuOC05OC42LTE3My42LTk1LjQgLTEyMy41IDMuMS0yNzMuOSA4MS42LTI3My45IDk1LjQgMCAwLTY3LjcgMTQyLjIgMjguOCA2Ni4zQzk0LjIgMTc5LjggNDcxLjggMTU5LjcgNDcxLjggMTQ1Ljl6IiBjbGFzcz0iYSIvPjxwYXRoIGQ9Ik0yNy40IDM3MC4yYzAgMTMuOCA0Mi44IDk4LjYgMTczLjYgOTUuNCAxMjMuNS0zLjEgMjczLjktODEuNiAyNzMuOS05NS40IDAgMCA2Ny43LTE0Mi4yLTI4LjgtNjYuM0M0MDUgMzM2LjIgMjcuNCAzNTYuNCAyNy40IDM3MC4yeiIgY2xhc3M9ImEiLz48L3N2Zz4=) no-repeat center top;
     overflow: hidden;
     font-size: 30px;
@@ -255,7 +260,8 @@ body {
       text-decoration: none;
       font-size: 40px;
       color: #f5a562;
-      transform: scale(1); }
+      transform: scale(1);
+      transition: all .5s linear; }
 
 .sidebar {
   grid-column: 11 / 13;
@@ -268,7 +274,7 @@ body {
     margin-bottom: 9px;
     padding: 6px;
     height: 30px;
-    transition: .5s; }
+    transition: all .5s linear; }
     .sidebar li:hover {
       transform: translateX(-20px); }
 
