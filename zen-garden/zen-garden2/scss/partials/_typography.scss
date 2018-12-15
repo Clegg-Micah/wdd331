@@ -13,6 +13,8 @@ body{
       color: $font-color;
       background-color: $main-background;
 
+      font-size: 1px;
+
 
 }
 
@@ -45,18 +47,35 @@ h3{
   text-align: left;
 }
 
-a{
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #392758;
+	}
+a:visited {
+	font-weight: bold;
+	text-decoration: none;
+	color: #f5a562;
+	}
+a:hover, a:focus, a:active {
   text-decoration: none;
-}
-a:hover{
-  display: inline-block;
-  color: $hover-color;
-  font-weight: bold;
-  font-size: 36px;
-  transform: perspective(3px) translateX(-3) scale(1);
-  transition-duration: 1s;
-  transition-property: transform;
-}
+  font-size: 16px;
+	color: #f5a562;
+  transform: scale(1);
+	}
+
+// a{
+//   text-decoration: none;
+// }
+// a:hover{
+//   display: inline-block;
+//   color: $hover-color;
+//   font-weight: bold;
+//   font-size: 36px;
+//   transform:  translateX(-150) scale(1);
+//   transition-duration: 1s;
+//   transition-property: transform;
+// }
 // .hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
 //   transform: translateX(-8px);
 // }

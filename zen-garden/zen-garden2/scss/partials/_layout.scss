@@ -1,269 +1,402 @@
-// Example of Nested code used on gridbyexample.com
-// .wrapper {
-//         display: grid;
-//     grid-gap: 10px;
-//         grid-template-columns: repeat(4, [col] 150px ) ;
-//         grid-template-rows: repeat(2, [row] auto  );
-//         background-color: #fff;
-//         color: #444;
-//     }
-//
-//     .box {
-//         background-color: #444;
-//         color: #fff;
-//         border-radius: 5px;
-//         padding: 20px;
-//         font-size: 150%;
-//
-//     }
-//
-//     .box .box {
-//         background-color: #ccc;
-//         color: #444;
-//     }
-//
-//     .a {
-//         grid-column: col / span 2;
-//         grid-row: row;
-//     }
-//
-//     .b {
-//         grid-column: col 3 / span 2;
-//         grid-row: row;
-//     }
-//
-//     .c {
-//         grid-column: col / span 2;
-//         grid-row: row 2;
-//     }
-//
-//     .d{
-//         grid-column: col 3 / span 2;
-//         grid-row: row 2;
-//         display: grid;
-//     grid-gap: 10px;
-//         grid-template-columns: 1fr 1fr;
-//     }
-//
-//     .e {
-//         grid-column: 1 / 3;
-//         grid-row: 1;
-//     }
-//
-//     .f {
-//         grid-column: 1;
-//         grid-row: 2;
-//     }
-//
-//     .g {
-//         grid-column: 2;
-//         grid-row: 2;
-//     }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 
-
-//*first part of 1-3 rows*//
-// .main>*{
-//     max-width: 95vw;
-//     margin: auto;
-// }
-
-/* ********************************
-***** Mobile Layout ***************
-********************************* */
 .page-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(12, 8.3333% ) ;
+  grid-template-rows: repeat(7, 14.28%  );
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.main>* {
-    width: auto;
-}
-header {
-    position: relative;
-}
-header:before {
-    content:"";
-    position: absolute;
-    width: 200px;
-    height: 200px;
+
+.intro {
+  grid-column: 1 / 6;
+  grid-row: 1 / 3;
+  overflow: visible;
+  position: relative;
+
+
+  &::before {
+    content: '';
     @include sun;
-    background-size: contain;
-    top: 0;
-    right: 50px;
-}
-.preamble {
-
-    &:before {
-        @include big-dipper;
-    }
-}
-.explanation {
-    @include planet-yellow;
-    &:before {
-
-    }
-}
-.participation {
-    @include planet-earth;
-    &:before {
-
-    }
-}
-.benefits {
-    @include planet-purple;
-    &:before {
-
-    }
-}
-.requirements {
-    @include planet-blue;
-    &:before {
-
-    }
-}
-footer {
-    @include planet-orange;
-    &:before {
-
-    }
-}
-
-
-
-
-//Alien insertion
-.design-name {
-    @include alien1;
-}
-.design-archives {
-    @include alien2;
-}
-.zen-resources {
-    @include alien3;
-}
-.next {
-    @include alien4;
-}
-.designer-name {
-    @include alien5;
-}
-nav {
-    position: relative;
-    @include alien6;
-}
-nav :before {
-    content:"";
     position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0;
-    left: -50px;
-    @include alien1;
-    transition: 2s;
-}
-nav:hover :before {
-    transform: translateX(-50px);
-}
-@include breakpoint(medium) {
-.page-wrapper {
-        display: grid;
-    grid-gap: 5px;
-        grid-template-columns: repeat(12, [col] 8.3333% ) ;
-        grid-template-rows: repeat(9, [row] 300px  );
-    // max-width: 100%;
-
-    }
-
-    .intro {
-      grid-column: col 1 / span 5;
-      grid-row: 1 / span 5;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-size: contain;
+    width: 563px;
+    height: 602px;
+    top: -248px;
+    left: -222px;
   }
 
-    header {
-        grid-column: 1 / 5;
-        grid-row: 1/ span 6;
-        width: 100%;
-        // @include star(1em, $star-color, 10em, 26em);
-            }
-
-    .summary {
-        grid-column: 1 / 4;
-        grid-row: 2;
-        // @include star(1em, $star-color, 13em, 27em);
-          }
-
-    .preamble {
-        grid-column: 1 / 4;
-        grid-row: 6;
-        // @include star(1em, $star-color, 17em, 27em);
-          }
-
-
-    //second part of 4-8 rows
-    .main {
-      grid-column: col 1 / span 10;
-      grid-row: 1/ span 9;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  header {
+    position: relative;
+    padding: 10px;
   }
 
-        .explanation {      //So What is This About?
-            grid-column: 1 / span 2;
-            grid-row: 2;
-            // @include star(1em, $star-color, 20em, 32em);
-        }
+  .summary {
+    position: absolute;
+    bottom: -108px;
+    right: 31px;
+    width: 300px;
+    height: 300px;
+    @include big-dipper;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-        .participation  {   //Participation
-            grid-column: 3 / span 2;
-            grid-row: 1;
-            // @include star(1em, $star-color, 26em, 30em);
-        }
-        .benefits  {        //Benefits
-            grid-column: 1 / span 2;
-            grid-row: 6;
-            // @include star(1em, $star-color, 26em, 24em);
-        }
-        .requirements  {    //Requirements
-            grid-column: 3 / span 2;
-            grid-row: 3;
-        }
-
-
-    //Sidebar
-    .sidebar {
-      grid-column: col 12 / span 3;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-}
-
-      .wrapper {
-
-            &> .design-selection {
-                 //Select a Design
-                    grid-column:  1/ 3;
-                    grid-row: 1;
-            }
-            &> .design-archives {
-                     //Archives
-                    grid-column: 1 / 3;
-                    grid-row: 2;
-            }
-            &> .zen-resources {
-                 //Resources
-                    grid-column: 1 / 3;
-                    grid-row: 3;
-            }
-        }
-
-
-    //Footer
-    footer  {
-        grid-column: 6 / span 3;
-        grid-row: 9;
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
     }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+      }
+    }
+  }
+
+  .preamble {
+    position: absolute;
+    bottom: -108px;
+    right: 31px;
+    width: 300px;
+    height: 300px;
+    @include planet-earth;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
+    }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+      }
+    }
+
+  }
 }
+
+
+
+.main {
+  grid-column: 1 / 11;
+  grid-row: 1 / 9;
+
+  display: flex;
+
+  .explanation{
+    position: absolute;
+    bottom: 30%;
+    left: 1%;
+    width: 300px;
+    height: 300px;
+    @include spaceship;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
+    }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+      }
+    }
+  }
+
+  .participation{
+    position: absolute;
+    bottom: 60%;
+    left: 54%;
+    width: 300px;
+    height: 300px;
+    @include planet-yellow;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
+    }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+      }
+    }
+  }
+
+  .benefits{
+    position: absolute;
+    bottom: 16%;
+    left: 23%;
+    width: 300px;
+    height: 300px;
+    @include planet-purple;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
+    }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+      }
+    }
+  }
+
+  .requirements{
+    position: absolute;
+    bottom: 27%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    @include planet-blue;
+    background-size: contain;
+    overflow: visible;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {padding: 5px;
+      opacity: 0;
+      height: 0;
+      background-color:rgba(0,0,0,0.5);
+    }
+
+    &:hover {
+      p {
+       opacity: 1;
+       height: auto;
+       transform:  translateX(20px);
+      }
+    }
+  }
+
+  footer{
+    position: absolute;
+    top: 87%;
+    right: 29%;
+    width: 300px;
+    height: 300px;
+    @include planet-orange;
+    background-size: contain;
+    overflow: hidden;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sidebar {
+  grid-column: 11 / 13;
+  grid-row: 1 / 8;
+  font-size: 14px;
+  overflow: hidden;
+
+  li {
+    list-style-type: none;
+    background-color: rgba(255,255,2555,.5);
+    margin-bottom: 9px;
+    padding: 6px;
+    height: 40px;
+    transition: .5s;
+    &:hover{
+       transform: translateX(-20px);
+     }
+
+  }
+}
+
+//
+// /* ********************************
+// ***** Mobile Layout ***************
+// ********************************* */
+// .main>* {
+//     width: auto;
+// }
+// header {
+//     position: relative;
+// }
+//
+//
+//
+// //Alien insertion
+// .design-name {
+//     @include alien1;
+// }
+// .design-archives {
+//     @include alien2;
+// }
+// .zen-resources {
+//     @include alien3;
+// }
+// .next {
+//     @include alien4;
+// }
+// .designer-name {
+//     @include alien5;
+// }
+// nav {
+//     position: relative;
+//     @include alien6;
+// }
+// nav :before {
+//     content:"";
+//     position: absolute;
+//     width: 100px;
+//     height: 100px;
+//     top: 0;
+//     left: -50px;
+//     @include alien1;
+//     transition: 2s;
+// }
+// nav:hover :before {
+//     transform: translateX(-50px);
+// }
+// @include breakpoint(medium) {
+// .page-wrapper {
+//         display: grid;
+//         grid-gap: 5px;
+//        grid-template-columns: repeat(12, [col] 8.3333% ) ;
+//        grid-template-rows: repeat(7, [row]  14.28%  );
+//  margin: 0;
+//  padding: 0;
+//  position: relative;
+//
+//
+//     }
+//
+//   .intro {
+//     grid-column: 1 / span 3;
+//     grid-row: 1 / span 6;
+//     }
+//       #zen-intro{
+//          @include sun;
+//         grid-column: 1 / span 5;
+//         grid-row: 1 / span 2;
+//        width: 100%;
+//             }
+//
+//
+//     #zen-summary {
+//        grid-row: 2;
+//           }
+//
+//     #zen-preamble{
+//      @include planet-earth;
+//         grid-column: 2 ;
+//         grid-row: 4;
+//           }
+//
+//
+//     //Columns 7-12 after the intro
+//     .main {
+//
+//
+//         .explanation {      //So What is This About?
+//           @include planet-yellow;
+//             grid-column: 9;
+//             grid-row: 2;
+//         }
+//         //
+//          .participation  {   //Participation
+//            @include planet-blue;
+//              grid-column: 2;
+//              grid-row: 4;
+//
+//          }
+//          .benefits  {        //Benefits
+//            @include planet-purple;
+//             grid-column: 1 / span 2;
+//             grid-row: 6;
+//
+//          }
+//
+//   }
+//
+//     //Sidebar
+//     .sidebar {
+//       grid-column: col 11 / span 3;
+//       transform: translateX(30px);
+//   }
+//
+//       .wrapper {
+//
+//             &> .design-selection {
+//                  //Select a Design
+//                     grid-column:  1/ 3;
+//                     grid-row: 1;
+//             }
+//             &> .design-archives {
+//                      //Archives
+//                     grid-column: 1 / 3;
+//                     grid-row: 2;
+//             }
+//             &> .zen-resources {
+//                  //Resources
+//                     grid-column: 1 / 3;
+//                     grid-row: 3;
+//             }
+//         }
+//
+//
+//     //Footer
+//     footer  {
+//       @include planet-orange;
+//         grid-column: 6 / span 3;
+//         grid-row: 9;
+//     }
+// }
