@@ -1,4 +1,0 @@
-$break-1: 900px;
-@mixin breakpoint($break) {
-@media screen and (max-width: $break-1) { @content; }
-}
