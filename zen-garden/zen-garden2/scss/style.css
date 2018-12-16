@@ -277,5 +277,78 @@ body {
     transition: all .5s linear; }
     .sidebar li:hover {
       transform: translateX(-20px); }
+/*aliens*/
+footer::before {
+  display: block;
+  content: ' ';
+  background-image: url('/scss/images/alien6.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+}
 
+footer::after {
+  display: block;
+  content: ' ';
+  background-image: url('/scss/images/alien4.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+}
+
+.select::after {
+  display: inline-flex;
+  content: ' ';
+  background-image: url('/scss/images/alien1.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-top: -50px;
+  margin-left: 130px;
+}
+
+.design-archives::before{
+  display: inline-flex;
+  content: ' ';
+  background-image: url('/scss/images/alien3.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-top: 8px;
+  margin-left: 80px;
+}
+
+.design-archives::after {
+  display: inline-flex;
+  content: ' ';
+  background-image: url('/scss/images/alien2.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-top: -80px;
+  margin-left: 145px;
+}
+
+.zen-resources::before{
+  display: inline-flex;
+  content: ' ';
+  background-image: url('/scss/images/alien5.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-top: -220px;
+  margin-left: -80px;
+}
+
+.benefits::before{
+  display: block;
+  content: ' ';
+  background-image: url('/scss/images/alien4.svg');
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  margin-top: 23px;
+  margin-left: -50px;
+}
 /*# sourceMappingURL=style.css.map */
