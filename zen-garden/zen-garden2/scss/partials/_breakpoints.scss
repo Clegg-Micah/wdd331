@@ -1,9 +1,9 @@
-$break-small: 20em;   //400px
-$break-medium: 46.8em;   //750px
-$break-large: 67.5em;  //1080px
-
-@mixin breakpoint($break) {
-@if $break == small {
-@media screen and (max-width: $break-small) { @content; }
-}
-}
+// $break-small: 20em;   //400px
+// $break-medium: 46.8em;   //750px
+// $break-large: 67.5em;  //1080px
+//
+// @mixin breakpoint($break) {
+// @if $break == small {
+// @media screen and (max-width: $break-small) { @content; }
+// }
+// }
