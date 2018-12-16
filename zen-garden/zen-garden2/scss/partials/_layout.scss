@@ -227,7 +227,7 @@ body {
     }
 }
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
         .page-wrapper {
             display: grid;
             grid-template-columns: repeat(12, 8.3333%);
