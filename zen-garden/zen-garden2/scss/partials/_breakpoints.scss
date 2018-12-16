@@ -1,9 +1,4 @@
-$break-small: 20em;   //400px
-$break-medium: 46.8em;   //750px
-$break-large: 67.5em;  //1080px
-
+$break-1: 900px;
 @mixin breakpoint($break) {
-@if $break == small {
-@media screen and (max-width: $break-small) { @content; }
-}
+@media screen and (max-width: $break-1) { @content; }
 }

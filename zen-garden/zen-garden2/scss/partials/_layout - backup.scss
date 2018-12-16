@@ -29,7 +29,6 @@ body {
         height: 100%;
         top: -50%;
         left: -20%;
-        z-index: -1;
     }
 
     header {
@@ -47,22 +46,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        p {
-            padding: 5px;
-            opacity: 0;
-            height: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        &:hover {
-            p {
-                opacity: 1;
-                height: auto;
-                transition: all .5s linear;
-                z-index: 2;
-            }
-        }
     }
 
     .preamble {
@@ -89,7 +72,6 @@ body {
                 opacity: 1;
                 height: auto;
                 transition: all .5s linear;
-                z-index: 2;
             }
         }
 
@@ -102,8 +84,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    & > * {
+    &>* {
         margin: 1em;
     }
 
@@ -132,7 +113,6 @@ body {
                 opacity: 1;
                 height: auto;
                 transition: all .5s linear;
-                z-index: 2;
             }
         }
     }
@@ -159,7 +139,6 @@ body {
                 opacity: 1;
                 height: auto;
                 transition: all .5s linear;
-                z-index: 2;
             }
         }
     }
@@ -191,11 +170,8 @@ body {
                 opacity: 1;
                 height: auto;
                 transition: all .5s linear;
-                z-index: 2;
             }
-
             &::before {
-                //move the alien to match the movement of the rocket.
                 transform: translateY(20px);
             }
         }
@@ -223,7 +199,6 @@ body {
                 opacity: 1;
                 height: auto;
                 transition: all .5s linear;
-                z-index: 2;
             }
         }
     }
@@ -261,7 +236,6 @@ body {
 
     }
 }
-
 .sidebar {
     font-size: 14px;
     overflow: visible;
@@ -285,7 +259,7 @@ body {
 }
 
 
-@include breakpoint($break-1) {
+@media screen and (min-width:900px) {
     .page-wrapper {
         display: grid;
         grid-template-columns: repeat(12, 8.3333%);
@@ -297,10 +271,19 @@ body {
         grid-row: 1 / 3;
 
         &::before {
+            content: '';
+            @include sun;
+            position: absolute;
+            background-size: contain;
             width: 563px;
             height: 602px;
             top: -248px;
             left: -222px;
+        }
+
+        header {
+            position: relative;
+            padding: 10px;
         }
 
         .summary {
@@ -340,6 +323,30 @@ body {
             right: -2%;
             width: 275px;
             height: 275px;
+            @include planet-earth;
+            background-size: contain;
+            overflow: visible;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 5px;
+                opacity: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    height: auto;
+                    transition: all .5s linear;
+                }
+            }
+
         }
     }
 
@@ -349,6 +356,8 @@ body {
         grid-column: 1 / 11;
         grid-row: 1 / 9;
 
+        display: flex;
+
         .explanation {
             //So What is this About?
             position: absolute;
@@ -356,6 +365,29 @@ body {
             left: 1%;
             width: 175px;
             height: 175px;
+            @include planet-purple;
+            background-size: contain;
+            overflow: visible;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 5px;
+                opacity: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    height: auto;
+                    transition: all .5s linear;
+                }
+            }
         }
 
         .participation {
@@ -364,6 +396,29 @@ body {
             left: 38%;
             width: 250px;
             height: 250px;
+            @include planet-yellow;
+            background-size: contain;
+            overflow: visible;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 5px;
+                opacity: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    height: auto;
+                    transition: all .5s linear;
+                }
+            }
         }
 
         .benefits {
@@ -372,6 +427,34 @@ body {
             left: 52%;
             width: 500px;
             height: 300px;
+            @include spaceship;
+            overflow: hidden;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(10deg);
+
+            h3 {
+                margin: 2px 0;
+                color: red;
+            }
+
+            p {
+                margin: 0;
+                opacity: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    height: auto;
+                    transition: all .5s linear;
+                }
+            }
         }
 
         .requirements {
@@ -380,18 +463,83 @@ body {
             right: 16%;
             width: 375px;
             height: 375px;
+            @include planet-blue;
+            background-size: contain;
+            overflow: visible;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 5px;
+                opacity: 0;
+                height: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &:hover {
+                p {
+                    opacity: 1;
+                    height: auto;
+                    transform: translateX(-20px);
+                    transition: all .5s linear;
+                }
+            }
         }
 
         footer {
+            position: absolute;
             top: 76%;
             right: 67%;
             width: 500px;
             height: 251px;
+            @include planet-orange;
+            overflow: hidden;
+            font-size: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                padding: 5px;
+                color: white;
+                font-size: 20px;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                text-decoration: none;
+                font-size: 40px;
+                color: #f5a562;
+                transform: scale(1);
+                transition: all .5s linear;
+            }
+
         }
     }
 
     .sidebar {
         grid-column: 11 / 13;
         grid-row: 1 / 8;
+        font-size: 14px;
+        overflow: visible;
+
+        li {
+            list-style-type: none;
+            background-color: rgba(255, 255, 2555, .5);
+            margin-bottom: 9px;
+            padding: 6px;
+            height: 30px;
+            transition: all .5s linear;
+
+            &:hover {
+                transform: translateX(-20px);
+            }
+
+        }
     }
 }
